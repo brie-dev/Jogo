@@ -1,13 +1,31 @@
+import pygame
+
+
 COLOR_GREEN = (158, 153, 84)
 COLOR_WHITE = (255, 255, 255)
 COLOR_YELLOW = (255, 255, 128)
+
+EVENT_ENEMY = pygame.USEREVENT + 1
 
 ENTITY_SPEED = {
     'Level1Bg0': 0,
     'Level1Bg1': 1,
     'Level1Bg2': 2,
     'Level1Bg3': 3,
+    'Player1': 3,
+    'Player2': 3,
+    'Enemy1': 2,
+    'Enemy2': 1,
 }
+
+SPAWN_TIME = 4000
+
+PLAYER_KEY_LEFT = {'Player1': pygame.K_LEFT,
+                 'Player2': pygame.K_a}
+PLAYER_KEY_RIGHT = {'Player1': pygame.K_RIGHT,
+                 'Player2': pygame.K_d}
+PLAYER_KEY_ATTACK = {'Player1': pygame.K_RCTRL,
+                 'Player2': pygame.K_LCTRL}
 
 MENU_OPTION = ('NEW GAME 1P',
                'NEW GAME 2P - COOPERATIVE',
